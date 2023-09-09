@@ -1,0 +1,29 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Area",
+            "request": "launch",
+            "mainClass": "Area",
+            "projectName": "MyFile"
+        },
+        {
+            "type": "java",
+            "name": "MyFile",
+            "request": "launch",
+            "mainClass": "com.mycompany.myfile.MyFile",
+            "projectName": "MyFile"
+        },
+        {
+            "type": "java",
+            "name": "Area1",
+            "request": "launch",
+            "mainClass": "Area1",
+            "projectName": "MyFile"
+        }
+    ]
+}
