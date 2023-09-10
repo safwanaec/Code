@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Grading",
+            "request": "launch",
+            "mainClass": "Grading",
+            "projectName": "Code_72d74406"
+        },
+        {
+            "type": "java",
+            "name": "temp",
+            "request": "launch",
+            "mainClass": "temp",
+            "projectName": "Code_72d74406"
+        },
+        {
+            "type": "java",
             "name": "Area",
             "request": "launch",
             "mainClass": "Area",
