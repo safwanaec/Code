@@ -29,5 +29,6 @@ public class Grading {
         else{
             System.out.println("\nWrong input!");
         }
+        inp.close();
     }
 }

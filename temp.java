@@ -23,7 +23,7 @@ public class temp {
         else{
             System.out.println("\nWrong input!!");
         }
-        
+        inp.close();
     }
     
 }
