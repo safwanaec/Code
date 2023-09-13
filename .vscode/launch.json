@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "posNeg",
+            "request": "launch",
+            "mainClass": "posNeg",
+            "projectName": "Code_72d74406"
+        },
+        {
+            "type": "java",
+            "name": "HelloWorld",
+            "request": "launch",
+            "mainClass": "HelloWorld",
+            "projectName": "Code_72d74406"
+        },
+        {
+            "type": "java",
+            "name": "MortgageCalculator",
+            "request": "launch",
+            "mainClass": "MortgageCalculator",
+            "projectName": "Code_72d74406"
+        },
+        {
+            "type": "java",
             "name": "NumToEng",
             "request": "launch",
             "mainClass": "NumToEng",

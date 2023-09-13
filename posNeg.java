@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class HelloWorld 
+public class posNeg 
 {
 
     public static void main(String[] args) 
@@ -22,7 +22,7 @@ public class HelloWorld
 
         
         double hight = input.nextDouble();
-
+        input.close();
 
     }
 }
