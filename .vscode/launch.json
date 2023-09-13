@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "NumToEng",
+            "request": "launch",
+            "mainClass": "NumToEng",
+            "projectName": "Code_72d74406"
+        },
+        {
+            "type": "java",
             "name": "Grading",
             "request": "launch",
             "mainClass": "Grading",
