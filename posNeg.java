@@ -22,6 +22,8 @@ public class posNeg
 
         
         double hight = input.nextDouble();
+
+        System.out.println(0.5*base*hight);
         input.close();
 
     }

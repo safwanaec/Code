@@ -42,6 +42,7 @@ public class NumToEng {
                 System.out.println("Error!");
                 break;
         }
+        inp.close();
 
     }
 }

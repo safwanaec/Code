@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "newJavaFile",
+            "request": "launch",
+            "mainClass": "newJavaFile",
+            "projectName": "Code_72d74406"
+        },
+        {
+            "type": "java",
             "name": "posNeg",
             "request": "launch",
             "mainClass": "posNeg",
