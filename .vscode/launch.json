@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "p",
+            "request": "launch",
+            "mainClass": "p",
+            "projectName": "Code_72d74406"
+        },
+        {
+            "type": "java",
+            "name": "a20923",
+            "request": "launch",
+            "mainClass": "a20923",
+            "projectName": "Code_72d74406"
+        },
+        {
+            "type": "java",
             "name": "newJavaFile",
             "request": "launch",
             "mainClass": "newJavaFile",
