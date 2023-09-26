@@ -16,5 +16,6 @@ public class a25923 {
     System.out.println(myObj.x);
     System.out.println(myObj.age);
     System.out.println(jahidTheHero.name);
+    sc.close();
  }
 }

@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "accountHolder",
+            "request": "launch",
+            "mainClass": "accountHolder",
+            "projectName": "Code_72d74406"
+        },
+        {
+            "type": "java",
+            "name": "b26923",
+            "request": "launch",
+            "mainClass": "b26923",
+            "projectName": "Code_72d74406"
+        },
+        {
+            "type": "java",
             "name": "a25923",
             "request": "launch",
             "mainClass": "a25923",
