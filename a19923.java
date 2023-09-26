@@ -13,12 +13,13 @@ public class a19923 {
             num[i]=inp.nextInt();
         }
 
-        int sum=0;
+        int sum=0, mul=1;
 
         for(int i = 0; i<range; i++){
             sum=sum+num[i];
+            mul*=num[i];
         }
-        System.out.println("Total sum: "+sum);
+        System.out.println("Total sum: "+sum+"\nTotal multiplication: "+mul);
 
         inp.close();
     }
