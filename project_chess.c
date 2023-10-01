@@ -1,30 +1,30 @@
 #include<stdio.h>
 
-void chess_board(int board_value[][9],int chess_piece[]);
+void chess_board_print(int board_value[][9],int chess_piece[]);
 void board_initialization(int board_value[][9],int chess_piece[]);
 void input_processor(int *x, int *y);
 void clearLines(int numLines);
 
 int main()
 {
-    int b_v[9][9]={0};                                          //<<creates addresses for each cell of the board where
+    int Board_Value[9][9]={0};                                          //<<creates addresses for each cell of the board where
     /*{}*/                                                      //values could be stored and puts the value 0 to all addresses
 
-    int c_p[12]={1,2,3,4,5,6,7,8,9,10,11,12};                   //<<chess piece values for each indevidual type of chess piece
+    int Chess_Piece[12]={1,2,3,4,5,6,7,8,9,10,11,12};                   //<<chess piece values for each indevidual type of chess piece
 
-    board_initialization(b_v,c_p);                              //<<initializes the board to new state
+    board_initialization(Board_Value,Chess_Piece);                              //<<initializes the board to new state
 
-    chess_board(b_v,c_p);                                       //<<updates and prints the chess board
+    chess_board_print(Board_Value,Chess_Piece);                                       //<<updates and prints the chess board
 
     int a,b;                                                    //<<stores the input cell address in (x,y) format
-    //input_processor(&a,&b);                                     //<<takes and processes the inputed cell address in the board
-    ///printf("%d %d",a,b);
+    input_processor(&a,&b);                                     //<<takes and processes the inputed cell address in the board
+    printf("%d %d",a,b);
 
     return 0;
 }
 
 
-void chess_board(int board_value[][9],int chess_piece[])
+void chess_board_print(int board_value[][9],int chess_piece[])
 {
     void colorizer(int i,int j,char c[]);
 

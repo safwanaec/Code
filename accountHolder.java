@@ -1,18 +1,25 @@
-import java.text.NumberFormat;
+import java.util.Scanner;
 
 public class accountHolder {
     public static void main(String[] args) {
         bankAccountTemplate bankAccount1 = new bankAccountTemplate();
-        bankAccount1.accountNumber=10029876545673L;
-        bankAccount1.accountHolderName="Safwan";
-        bankAccount1.depositedMoney=999999999;
-        //bankAccount1.setValue(122737373773737L, "Safwan", 100000);
+         bankAccount1.setValue(100273836246l, "Safwan", 100000);
+       
         bankAccount1.bankAccount();
-        /*NumberFormat money = NumberFormat.getCurrencyInstance();
+        System.out.println("\n\nTo Deposit money enter 1\n\nTo Withdraw money enter 2");
+        Scanner inp = new Scanner(System.in);
+        System.out.print("Choose: ");
+        byte choice = inp.nextByte();
 
-        System.out.println("Account number:"+bankAccount1.accountNumber);
-        System.out.println("Account holder name:"+bankAccount1.accountHolderName);
-        System.out.println("Account balance:"+money.format(bankAccount1.depositedMoney));*/
-
+        if (choice==1){
+            bankAccount1.depositMoney();
+        }
+        else if(choice==2){
+            bankAccount1.withdrawMoney();
+        }
+        else{System.out.println("WRONG CHOICE!!");}
+        //System.out.println("\n\n");
+        bankAccount1.bankAccount();
+        inp.close();
     }
 }
