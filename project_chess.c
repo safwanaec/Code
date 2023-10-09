@@ -4,6 +4,8 @@ void chess_board_print(int board_value[][9],int chess_piece[]);
 void board_initialization(int board_value[][9],int chess_piece[]);
 void input_processor(int *x, int *y);
 void clearLines(int numLines);
+void red_pawn_processor(int board_value[][9],int i,int j);
+void output_procrssor(int board_value[][9],int i,int j);
 
 int main()
 {
@@ -19,7 +21,8 @@ int main()
 
     int a,b;                                                    //<<stores the input cell address in (x,y) format
     input_processor(&a,&b);                                     //<<takes and processes the inputed cell address in the board
-    printf("%d %d",a,b);
+    printf("%d %d\n",a,b);
+    output_procrssor( Board_Value, a, b);
 
     return 0;
 }
@@ -284,44 +287,89 @@ void colorizer(int i,int j,char c[])
 
 }
 
-void output(int i, int j, char op[2]) {
+void output(int i, int j, char Output[2]) {
     char j_c = 'A' + j - 1;  // Convert j to character 'A' to 'F'
-    op[0] = j_c;
-    op[1] = (char)(i + '0'); // Convert i to character '0' to '9'
+    Output[0] = j_c;
+    Output[1] = (char)(i + '0'); // Convert i to character '0' to '9'
+}
+
+void output_procrssor(int board_value[][9],int i,int j)
+{
+    void red_pawn_processor(int x[][9],int y,int z);
+    switch(board_value[j][i])
+        {
+            case 1:
+                red_pawn_processor(board_value, j, i);
+                break;
+            default: printf("");
+        }
 }
 
 
 void red_pawn_processor(int board_value[][9],int i,int j)
 {
-    char op_str[4][2];
-    for (int i = 0; i < 3; i++) {
-        for (int j = 0; j < 1; j++) 
+    char outputString[4][2];
+    for (int x = 0; x < 3; x++) {
+        for (int y = 0; y < 2; y++) 
         {
-            op_str[i][j] = '\0';
+            outputString[x][y] = '\0';
         }
     }
 
+    if (i == 7)
+    {
+        if (board_value[i-1][j] == 0)
+        {
+            output(i-1, j, outputString[0]); // A6
+        }
+        if ((board_value[i-2][j] == 0) && (board_value[i-1][j] == 0))
+        {
+        output(i-2, j, outputString[1]); // A5 (only if A6 is also empty)
+        }
+    }
+    else if (board_value[i-1][j] == 0)
+    {
+        output(i-1, j, outputString[0]); // A6 for positions other than A7
+    }
+    if(board_value[i-1][j+1]!=0 && j<8)
+    {
+        output(i-1,j+1,outputString[2]);
+    }
+    if(board_value[i-1][j-1]!=0 && j>1)
+    {
+        output(i-1,j-1,outputString[3]);
+    }
+    for(int a=0; a<4; a++)
+    {
+        if(outputString[a][0]!='\0')
+        {
+            printf("%s ",outputString[a]);
+        }
+    }
+}
+
+void blue_pawn_processor(int board_value[][9],int i,int j){
+    char outputString[4][2];
+    for (int x = 0; x < 3; x++) {
+        for (int y = 0; y < 1; y++) 
+        {
+            outputString[x][y] = '\0';
+        }
+    }
     if(board_value[i-1][j]==0)
     {
-        output(i-1,j,op_str[0]);
+        output(i-1,j,outputString[0]);
         if(i==7)
         {
-            output(i-2,j,op_str[1]);
+            output(i-2,j,outputString[1]);
         }
     }
     if(board_value[i-1][j+1]!=0 && j<9 && j>0)
     {
-        output(i-2,j,op_str[2]);
+        output(i-2,j,outputString[2]);
     }
     if(board_value[i-1][j-1]!=0 && j<9 && j>0)
     {
-        output(i-2,j,op_str[3]);
-    }
-    for(int a=0; a<=3; a++)
-    {
-        if(op_str[a]!="'\0'")
-        {
-            printf("%s ",op_str[a]);
-        }
+        output(i-2,j,outputString[3]);
     }
 }

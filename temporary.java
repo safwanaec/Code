@@ -12,5 +12,6 @@ public class temporary {
         }
 
         System.out.println(a[0]+a[1]+" "+a[2]);
+        inp.close();
     }
 }

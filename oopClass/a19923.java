@@ -4,7 +4,7 @@ public class a19923 {
     public static void main(String[] args) {
         Scanner inp = new Scanner(System.in);
         System.out.print("Enter the amount of nums you want to enter: ");
-        int range = inp.nextInt();
+        final int range = inp.nextInt();
         int[] num;
         num = new int[range];
 

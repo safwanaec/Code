@@ -8,7 +8,7 @@ public class a11023 {
         int sum = 0;
         for(int i = 0; i<=n; i++){
             sum = sum+i;
-            System.out.print(n);
+            System.out.print(i+"+");
         }
 
         System.out.println(sum);
