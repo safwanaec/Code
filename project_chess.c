@@ -14,6 +14,7 @@ int main()
 
     board_initialization(Board_Value,Chess_Piece);                              //<<initializes the board to new state
 
+
     chess_board_print(Board_Value,Chess_Piece);                                       //<<updates and prints the chess board
 
     int a,b;                                                    //<<stores the input cell address in (x,y) format
