@@ -1,3 +1,4 @@
+package uncatagorized;
 public class templateTester {
     public static void main(String[] args) {
         templateTest student1 = new templateTest();

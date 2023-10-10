@@ -1,3 +1,4 @@
+package uncatagorized;
 public class Bank {
     public static void main(String[] args) {
         bankTemplate acc = new bankTemplate();

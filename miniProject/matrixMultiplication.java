@@ -78,5 +78,6 @@ public class matrixMultiplication {
         else{
             System.out.println("The matrix can't be multiplied.");
         }
+        inp.close();
     }
 }

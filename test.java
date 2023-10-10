@@ -22,6 +22,7 @@ public class test {
         }
         System.out.println("The largest numberis:" + max);
         System.out.println("The lowest number is:" + min);
+        sc.close();
 
     }
 

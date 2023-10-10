@@ -1,3 +1,4 @@
+package uncatagorized;
 public class templateTest {
     int roll;
     String favouriteFood;

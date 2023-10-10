@@ -1,3 +1,4 @@
+package uncatagorized;
 public class bankTemplate {
     String accountname;
     long money;

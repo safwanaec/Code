@@ -26,6 +26,7 @@
         int y =sc.nextInt();
 
         s1.sum2(x, y);
+        sc.close();
         
 
     }
