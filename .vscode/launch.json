@@ -2,6 +2,13 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "Result",
+            "request": "launch",
+            "mainClass": "Result",
+            "projectName": "Code_72d74406"
+        },
+        {
             "name": "Debug",
             "type": "cppdbg",
             "request": "launch",

@@ -44,8 +44,6 @@ public class matrixMultiplication {
             for(int i=0; i<m1; i++){
                 for(int j=0; j<n2; j++){
                     ans=0;
-                     
-
                     for(int k=0; k<n1; k++){
                         ans = ans + matrix1[i][k]*matrix2[k][j];
                     }
