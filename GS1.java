@@ -10,7 +10,7 @@ public class GS1{
         String j =inp.nextLine();
         System.out.println("Number: "+i);
         System.out.println("name: "+j);
-
+        inp.close();
 
     }
 }

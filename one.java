@@ -16,6 +16,7 @@ public class one {
         }
         System.out.println();
         System.out.println(sum);
+        in.close();
         
     }
    

@@ -11,7 +11,9 @@ public class ArrayListExample {
        // System.out.println(number);
         for(int i:number)
         {
+            System.out.print(i);
             System.out.println(number);
+
         }
     }
     

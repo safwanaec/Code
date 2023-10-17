@@ -10,6 +10,7 @@ public class watermelonCF {
     } else{
         System.out.println("NO");
     }
+    sc.close();
 
     }
 }

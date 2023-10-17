@@ -47,5 +47,7 @@ public class two {
 
             System.out.println();
         }
+        in.close();
+        
     }
 }

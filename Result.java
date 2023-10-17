@@ -45,5 +45,6 @@ public class Result {
         i.show();
         System.out.println("total: "+i.total());
         System.out.println("avarage: "+i.avg());
+        inp.close();
     }
 }

@@ -61,5 +61,7 @@ class attendance{
         else{
             System.out.println("student is not allowed to sit in exam!");
         }
+        inp.close();
+        
     }
 }

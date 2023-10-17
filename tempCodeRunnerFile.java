@@ -1,1 +1,0 @@
-(sum + (Math.pow(i,3)));

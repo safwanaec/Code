@@ -7,6 +7,7 @@ public class classTest1 {
         System.out.println(i.cube(inp.nextLong()));
         System.out.println("Enter number of lines:");
         i.pattern(inp.nextInt());
+        inp.close();
     }
     public long cube(long x){
         return x*x*x;
