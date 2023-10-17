@@ -6,6 +6,7 @@ void input_processor(int *x, int *y);
 void clearLines(int numLines);
 void red_pawn_processor(int board_value[][9],int i,int j);
 void output_procrssor(int board_value[][9],int i,int j);
+char outputString[4][2];
 
 int main()
 {
@@ -21,7 +22,7 @@ int main()
 
     int a,b;                                                    //<<stores the input cell address in (x,y) format
     input_processor(&a,&b);                                     //<<takes and processes the inputed cell address in the board
-    printf("%d %d\n",a,b);
+    //printf("%d %d\n",a,b);
     output_procrssor( Board_Value, a, b);
 
     return 0;
@@ -293,25 +294,28 @@ void output(int i, int j, char Output[2]) {
     Output[1] = (char)(i + '0'); // Convert i to character '0' to '9'
 }
 
+void mover(int board_value[][9]){
+                                                                           
+}
+
 void output_procrssor(int board_value[][9],int i,int j)
 {
     void red_pawn_processor(int x[][9],int y,int z);
     void blue_pawn_processor(int x[][9],int y,int z);
     switch(board_value[j][i])
-        {
-            case 1:
-                red_pawn_processor(board_value, j, i);
-                break;
-            case 7:
-                blue_pawn_processor(board_value, j, i);
-            default: printf("");
-        }
+    {
+        case 1:
+            red_pawn_processor(board_value, j, i);
+            break;
+        case 7:
+            blue_pawn_processor(board_value, j, i);
+        default: printf("");
+    }
 }
 
 
 void red_pawn_processor(int board_value[][9],int i,int j)
 {
-    char outputString[4][2];
     int outputCount=0;
     for (int x = 0; x < 3; x++) {
         for (int y = 0; y < 2; y++) 
@@ -362,7 +366,6 @@ void red_pawn_processor(int board_value[][9],int i,int j)
 
 void blue_pawn_processor(int board_value[][9],int i,int j)
 {
-    char outputString[4][2];
     int outputCount=0;
     for (int x = 0; x < 3; x++) {
         for (int y = 0; y < 2; y++) 
