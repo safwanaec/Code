@@ -1,7 +1,7 @@
 import java.text.NumberFormat;
-import java.util.Scanner;
+import java.util.*;
 
-public class classTest{
+public class ClassTest {
     public static void main(String[] args) {
         /*
          * 16 October 2023
@@ -24,44 +24,43 @@ public class classTest{
         sb.Bonus();
         attendance ad = new attendance();
         ad.classAttendance();
-        int[] arr = new int[6];
+        // int[] arr = new int[6];
     }
 }
 
-class saleryBonus{
-    public void Bonus(){
+class saleryBonus {
+    public void Bonus() {
         Scanner inp = new Scanner(System.in);
         NumberFormat change = NumberFormat.getCurrencyInstance();
         System.out.println("Enter your current salary ammont:");
         double salary = inp.nextDouble();
         System.out.println("Enter thr ammount of years you've working in this company for:");
         int time = inp.nextInt();
-        double bonus = ((salary*5)/100);
-        double salaryIncludingBonus = bonus+salary;
-        if(time>5){
-            System.out.println("Your salary including bonus is: "+change.format(salaryIncludingBonus));
-        }
-        else{
-            System.out.println("Your salary is: "+change.format((salary)));
+        double bonus = ((salary * 5) / 100);
+        double salaryIncludingBonus = bonus + salary;
+        if (time > 5) {
+            System.out.println("Your salary including bonus is: " + change.format(salaryIncludingBonus));
+        } else {
+            System.out.println("Your salary is: " + change.format((salary)));
         }
         inp.close();
     }
 }
-class attendance{
-    public void classAttendance(){
-        Scanner inp = new Scanner(System.in);
+
+class attendance {
+    public void classAttendance() {
+        Scanner inp1 = new Scanner(System.in);
         System.out.println("Enter number of classes held: ");
-        int classesHeld=inp.nextInt();
+        int classesHeld = inp1.nextInt();
         System.out.println("Enter number of classes attended: ");
-        int classesAtended = inp.nextInt();
-        System.out.println("Percentage of class attended: "+((100*classesAtended)/classesHeld)+"%");
-        if(((100*classesAtended)/classesHeld)>75){
+        int classesAtended = inp1.nextInt();
+        System.out.println("Percentage of class attended: " + ((100 * classesAtended) / classesHeld) + "%");
+        if (((100 * classesAtended) / classesHeld) > 75) {
             System.out.println("student is allowed to sit in exam!");
-        }
-        else{
+        } else {
             System.out.println("student is not allowed to sit in exam!");
         }
-        inp.close();
-        
+        inp1.close();
+
     }
 }

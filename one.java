@@ -7,6 +7,7 @@ public class one {
         Scanner in = new Scanner(System.in);
         n= in.nextInt();
         int i;
+        in.close();
         double sum=0;
         for(i=1;i<=n;i++)
         {
@@ -16,8 +17,6 @@ public class one {
         }
         System.out.println();
         System.out.println(sum);
-        in.close();
-        
     }
    
     
