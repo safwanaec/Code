@@ -12,41 +12,41 @@ public class RomantoInteger13 {
         else System.out.println("mnooo");
         
     }
-    public static int romanToInt(String s){
-        int ans=0;
+    public static short romanToInt(String s){
+        short ans=0;
 		/*
 		I   =1
 		IV	=4
-		V	 =5
+		V	=5
 		IX	=9
-		X	 =10
-		IF	=40
-		F	 =50
-		IH	=90
-		H	 =100
-		IG	=400
-		G	 =500
-		IT	=900
-		T	 =1000
+		X	=10
+		XL	=40
+		L	=50
+		XC	=90
+		C	=100
+		CD	=400
+		D	=500
+		CM	=900
+		M	=1000
 		*/
-		for(int i=(s.length()-1); i>=0;i--){
+		for(byte i=(byte) (s.length()-1); i>=0;i--){
 		if(i>0 && s.charAt(i)=='V'&& s.charAt(i-1)=='I'){
 				ans-=2;
 			}
 		else if(i>0 && s.charAt(i)=='X'&& s.charAt(i-1)=='I'){
 				ans-=2;
 			}
-		else if(i>0 && s.charAt(i)=='F'&& s.charAt(i-1)=='I'){
-				ans-=11;
+		else if(i>0 && s.charAt(i)=='L'&& s.charAt(i-1)=='X'){
+				ans-=20;
 			}
-		else if(i>0 && s.charAt(i)=='H'&& s.charAt(i-1)=='I'){
-				ans-=11;
+		else if(i>0 && s.charAt(i)=='C'&& s.charAt(i-1)=='X'){
+				ans-=20;
 			}
-		else if(i>0 && s.charAt(i)=='G'&& s.charAt(i-1)=='I'){
-				ans-=101;
+		else if(i>0 && s.charAt(i)=='D'&& s.charAt(i-1)=='C'){
+				ans-=200;
 			}
-		else if(i>0 && s.charAt(i)=='T'&& s.charAt(i-1)=='I'){
-				ans-=101;
+		else if(i>0 && s.charAt(i)=='M'&& s.charAt(i-1)=='C'){
+				ans-=200;
 			}
 		switch (s.charAt(i)){
 				case 'I':
@@ -58,16 +58,16 @@ public class RomantoInteger13 {
 				case 'X':
 					ans+=10;
 					break;
-				case 'F':
+				case 'L':
 					ans+=50;
 					break;
-				case 'H':
+				case 'C':
 					ans+=100;
 					break;
-				case 'G':
+				case 'D':
 					ans+=500;
 					break;
-				case 'T':
+				case 'M':
 					ans+=1000;
 					break;
 				default:
@@ -75,6 +75,5 @@ public class RomantoInteger13 {
 		}
 		
 		return ans;
-
     }
 }

@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "B",
+            "request": "launch",
+            "mainClass": "mypack.B",
+            "projectName": "Code_72d74406"
+        },
+        {
+            "type": "java",
             "name": "Result",
             "request": "launch",
             "mainClass": "Result",

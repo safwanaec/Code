@@ -10,10 +10,21 @@ void output_procrssor(int board_value[][9],int i,int j);
 int main()
 {
     int Board_Value[9][9]={0};                                          //<<creates addresses for each cell of the board where
-    /*{}*/                                                      //values could be stored and puts the value 0 to all addresses
+    /*{}*/                                                           //values could be stored and puts the value 0 to all addresses
 
     int Chess_Piece[12]={1,2,3,4,5,6,7,8,9,10,11,12};                   //<<chess piece values for each indevidual type of chess piece
-
+    /*   1 = Red Pawn
+         2 = Red Rook
+         3 = Red Horse
+         4 = Red Bishop
+         5 = Red Queen
+         6 = Red King
+         7 = Blue Pawn
+         8 = Blue Rook
+         9 = Blue Horse
+         10 = Blue Bishop
+         11 = Blue Queen
+         12 = Blue King*/
     board_initialization(Board_Value,Chess_Piece);                              //<<initializes the board to new state
 
 
@@ -137,11 +148,11 @@ void board_initialization(int board_value[][9],int chess_piece[])
     {                                                           //format. essentially preparing the board for a new game
         for(int j=1; j<=8; j++)
         {
-            if(i==7)
+            /*if(i==7)
             {
                 board_value[i][j]=chess_piece[0];
-            }
-            else if(i==8 && (j==1||j==8))
+            }*/
+            if(i==8 && (j==1||j==8))
             {
                 board_value[i][j]=chess_piece[1];
             }
@@ -161,10 +172,10 @@ void board_initialization(int board_value[][9],int chess_piece[])
             {
                 board_value[i][j]=chess_piece[5];
             }
-            else if(i==2)
+            /*else if(i==2)
             {
                 board_value[i][j]=chess_piece[6];
-            }
+            }*/
             else if(i==1 && (j==1||j==8))
             {
                 board_value[i][j]=chess_piece[7];
@@ -296,10 +307,21 @@ void output(int i, int j, char Output[2]) {
 void output_procrssor(int board_value[][9],int i,int j)
 {
     void red_pawn_processor(int x[][9],int y,int z);
+    void blue_pawn_processor(int x[][9],int y,int z);
+    void rook_processoor(int x[][9],int y,int z);
     switch(board_value[j][i])
         {
             case 1:
                 red_pawn_processor(board_value, j, i);
+                break;
+            case 2:
+                rook_processoor(board_value,j,i);
+                break;
+            case 7:
+                blue_pawn_processor(board_value,j,i);
+                break;
+            case 8:
+                rook_processoor(board_value,j,i);
                 break;
             default: printf("");
         }
@@ -309,7 +331,7 @@ void output_procrssor(int board_value[][9],int i,int j)
 void red_pawn_processor(int board_value[][9],int i,int j)
 {
     char outputString[4][2];
-    for (int x = 0; x < 3; x++) {
+    for (int x = 0; x < 4; x++) {
         for (int y = 0; y < 2; y++) 
         {
             outputString[x][y] = '\0';
@@ -343,33 +365,100 @@ void red_pawn_processor(int board_value[][9],int i,int j)
     {
         if(outputString[a][0]!='\0')
         {
-            printf("%s ",outputString[a]);
+            for(int b=0; b<2; b++){
+                printf("%c",outputString[a][b]);
+            }
+            printf(" ");
         }
     }
 }
 
 void blue_pawn_processor(int board_value[][9],int i,int j){
     char outputString[4][2];
-    for (int x = 0; x < 3; x++) {
+    for (int x = 0; x < 4; x++) {
         for (int y = 0; y < 1; y++) 
         {
             outputString[x][y] = '\0';
         }
     }
-    if(board_value[i-1][j]==0)
+    if (i == 2)
     {
-        output(i-1,j,outputString[0]);
-        if(i==7)
+        if (board_value[i+1][j] == 0)
         {
-            output(i-2,j,outputString[1]);
+            output(i+1, j, outputString[0]); // A6
+        }
+        if ((board_value[i+2][j] == 0) && (board_value[i+1][j] == 0))
+        {
+        output(i+2, j, outputString[1]); // A5 (only if A6 is also empty)
         }
     }
-    if(board_value[i-1][j+1]!=0 && j<9 && j>0)
+    else if (board_value[i+1][j] == 0)
     {
-        output(i-2,j,outputString[2]);
+        output(i+1, j, outputString[0]); // A6 for positions other than A7
     }
-    if(board_value[i-1][j-1]!=0 && j<9 && j>0)
+    if(board_value[i+1][j+1]!=0 && j<8)
     {
-        output(i-2,j,outputString[3]);
+        output(i+1,j+1,outputString[2]);
     }
+    if(board_value[i+1][j-1]!=0 && j>1)
+    {
+        output(i+1,j-1,outputString[3]);
+    }
+    for(int a=0; a<4; a++)
+    {
+        if(outputString[a][0]!='\0')
+        {
+            for(int b=0; b<2; b++){
+                printf("%c",outputString[a][b]);
+            }
+            printf(" ");
+        }
+    }
+}
+void rook_processoor(int board_value[][9],int i,int j){
+    char outputString[15][2];
+    for (int x = 0; x < 15; x++) {
+        for (int y = 0; y < 1; y++) 
+        {
+            outputString[x][y] = '\0';
+        }
+    }
+    for(int x=j+1; x<9; x++){
+        if(board_value[i][x]==0){
+            output(i, x, outputString[x]);
+        }
+        else output(i, x, outputString[x]);break;
+    }
+    for(int x=j-1; x>0; x--){
+        if(board_value[i][x]==0){
+            output(i, x, outputString[x]);
+        }
+        else output(i, x, outputString[x]);break;
+    }
+    for(int x=i+1; x<9; x++){
+        if(board_value[x][j]==0){
+            output(x,j, outputString[7+x]);
+        }
+        else output(x,j, outputString[7+x]); break;
+    }
+    for(int x=i-1; x>0; x--){
+        if(board_value[x][j]==0){
+            output(x, j, outputString[7+x]);
+        }
+        else output(x,j, outputString[7+x]); break;
+    }
+    for(int a=0; a<15; a++)
+    {
+        if(outputString[a][0]!='\0')
+        {
+            for(int b=0; b<2; b++){
+                printf("%c",outputString[a][b]);
+            }
+            printf(" ");
+        }
+    }
+}
+
+void horse_processor(int board_value[][9],int i,int j){
+    
 }
