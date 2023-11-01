@@ -215,7 +215,7 @@ void input_processor(int *x, int *y)                            //<<thiis functi
         temp = a[1];
         *y = temp;
 
-        if((*x>48 && *x<57) && (*y>64 && *y<73 || *y>96 && *y<105))
+        if((*x>48 && *x<57) && (((*y>64) && (*y<73)) || ((*y>96) && (*y<105))))
         {
             temp = a[1];
             *x = temp;

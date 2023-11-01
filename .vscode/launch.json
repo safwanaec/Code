@@ -3,6 +3,118 @@
     "configurations": [
         {
             "type": "java",
+            "name": "class2",
+            "request": "launch",
+            "mainClass": "Others.class2",
+            "projectName": "Code_72d74406"
+        },
+        {
+            "type": "java",
+            "name": "ArrayExample",
+            "request": "launch",
+            "mainClass": "Others.ArrayExample",
+            "projectName": "Code_72d74406"
+        },
+        {
+            "type": "java",
+            "name": "a19923",
+            "request": "launch",
+            "mainClass": "a19923",
+            "projectName": "Code_72d74406"
+        },
+        {
+            "type": "java",
+            "name": "TestStudent4",
+            "request": "launch",
+            "mainClass": "uncatagorized.TestStudent4",
+            "projectName": "Code_72d74406"
+        },
+        {
+            "type": "java",
+            "name": "templateTester",
+            "request": "launch",
+            "mainClass": "uncatagorized.templateTester",
+            "projectName": "Code_72d74406"
+        },
+        {
+            "type": "java",
+            "name": "accountHolder",
+            "request": "launch",
+            "mainClass": "uncatagorized.accountHolder",
+            "projectName": "Code_72d74406"
+        },
+        {
+            "type": "java",
+            "name": "Bank",
+            "request": "launch",
+            "mainClass": "uncatagorized.Bank",
+            "projectName": "Code_72d74406"
+        },
+        {
+            "type": "java",
+            "name": "a11023",
+            "request": "launch",
+            "mainClass": "a11023",
+            "projectName": "Code_72d74406"
+        },
+        {
+            "type": "java",
+            "name": "BEE_1013",
+            "request": "launch",
+            "mainClass": "BEE_1013",
+            "projectName": "Code_72d74406"
+        },
+        {
+            "type": "java",
+            "name": "wordCounter",
+            "request": "launch",
+            "mainClass": "wordCounter",
+            "projectName": "Code_72d74406"
+        },
+        {
+            "type": "java",
+            "name": "test",
+            "request": "launch",
+            "mainClass": "CodeForces.test",
+            "projectName": "Code_72d74406"
+        },
+        {
+            "type": "java",
+            "name": "array2dSummation",
+            "request": "launch",
+            "mainClass": "array2dSummation",
+            "projectName": "Code_72d74406"
+        },
+        {
+            "type": "java",
+            "name": "array2dSummation",
+            "request": "launch",
+            "mainClass": "miniProject.array2dSummation",
+            "projectName": "Code_72d74406"
+        },
+        {
+            "type": "java",
+            "name": "primeNum",
+            "request": "launch",
+            "mainClass": "miniProject.primeNum",
+            "projectName": "Code_72d74406"
+        },
+        {
+            "type": "java",
+            "name": "Oparator",
+            "request": "launch",
+            "mainClass": "sollutions.miniProject.Oparator",
+            "projectName": "Code_72d74406"
+        },
+        {
+            "type": "java",
+            "name": "array2dSummation",
+            "request": "launch",
+            "mainClass": "sollutions.miniProject.array2dSummation",
+            "projectName": "Code_72d74406"
+        },
+        {
+            "type": "java",
             "name": "B",
             "request": "launch",
             "mainClass": "mypack.B",
