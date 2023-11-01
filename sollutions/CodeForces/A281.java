@@ -7,6 +7,12 @@ public class A281 {
         Scanner inp = new Scanner(System.in);
         String s = inp.nextLine();
         int a = s.charAt(0);
-        System.out.println(a);
+        if(a>96){
+            a-=32;
+        }
+        char[] c=s.toCharArray();
+        c[0]=(char) a;
+        System.out.println(c);
+        inp.close();
     }
 }
