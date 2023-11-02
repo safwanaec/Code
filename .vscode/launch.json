@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "A116",
+            "request": "launch",
+            "mainClass": "A116",
+            "projectName": "Code_72d74406"
+        },
+        {
+            "type": "java",
             "name": "A281",
             "request": "launch",
             "mainClass": "CodeForces.A281",
