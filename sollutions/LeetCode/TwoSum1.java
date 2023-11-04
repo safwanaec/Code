@@ -1,4 +1,3 @@
-package LeetCode;
 public class TwoSum1 {
     public static void main(String[] args) {
         TwoSum1 ts = new TwoSum1();

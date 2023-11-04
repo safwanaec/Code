@@ -1,5 +1,3 @@
-package LeetCode;
-
 public class ValidParentheses20 {
     public static void main(String[] args) {
         System.out.println(isValid("()[]{}([{]})"));
