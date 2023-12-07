@@ -34,6 +34,8 @@ class GetPlanFactory {
             return new CommercialPlan();
         } else if (planType.equalsIgnoreCase("INSTITUTIONALPLAN")) {
             return new InstitutionalPlan();
+        }else if (planType.equalsIgnoreCase("VILLAGEPLAN")){
+            return new VillagePlan();
         }
         return null;
     }
@@ -68,5 +70,11 @@ class InstitutionalPlan extends Plan {
 
     public void getRate() {
         rate = 5.50;
+    }
+}
+
+class VillagePlan extends Plan{
+    public void getRate(){
+        rate = 2.69;
     }
 }
