@@ -1,5 +1,3 @@
-package Others;
-
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
 

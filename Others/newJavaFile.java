@@ -1,5 +1,3 @@
-package Others;
-
 import java.util.Scanner;
 public class newJavaFile {
     public static void main(String[] args) {

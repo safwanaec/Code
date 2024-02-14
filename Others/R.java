@@ -1,5 +1,3 @@
-package Others;
-
 public class R {
         int[] roll = {1,2,3};
         
@@ -48,5 +46,5 @@ public class R {
     }
     
 
-   
+
 

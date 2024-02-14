@@ -224,8 +224,8 @@ void input_processor(int *x, int *y)                            //<<thiis functi
         }
         if(a[2]!='\0'||(*x>64 && *x<73 && (*y>64 && *y<73 || *y>96 && *y<105)) || (*x>96 && *x<105 && (*y>96 && *y<105 || *y>64 && *y<73)) || (*x>48 && *x<57 && *y>48 && *y<57))
         {
-            clearLines(5);
-            printf("\n\n\033[1mWrong Input!\033[0m");
+            clearLines(4);
+            printf("\n\033[1mWrong Input!\033[0m");
             i++;
         }
         else if(*x>64 && *x<73)
@@ -240,8 +240,8 @@ void input_processor(int *x, int *y)                            //<<thiis functi
         {
             if(i==0)
             {
-                clearLines(5);
-                printf("\n\n\033[1mWrong Input!\033[0m");
+                clearLines(4);
+                printf("\n\033[1mWrong Input!\033[0m");
                 i++;
             }
         }
@@ -415,44 +415,67 @@ void blue_pawn_processor(int board_value[][9],int i,int j){
         }
     }
 }
-void rook_processoor(int board_value[][9],int i,int j){
+void rook_processoor(int board_value[][9], int i, int j)
+{
     char outputString[15][2];
-    for (int x = 0; x < 15; x++) {
-        for (int y = 0; y < 1; y++) 
+    for (int x = 0; x < 15; x++)
+    {
+        for (int y = 0; y < 1; y++)
         {
             outputString[x][y] = '\0';
         }
     }
-    for(int x=j+1; x<9; x++){
-        if(board_value[i][x]==0){
-            output(i, x, outputString[x]);
-        }
-        else output(i, x, outputString[x]);break;
-    }
-    for(int x=j-1; x>0; x--){
-        if(board_value[i][x]==0){
-            output(i, x, outputString[x]);
-        }
-        else output(i, x, outputString[x]);break;
-    }
-    for(int x=i+1; x<9; x++){
-        if(board_value[x][j]==0){
-            output(x,j, outputString[7+x]);
-        }
-        else output(x,j, outputString[7+x]); break;
-    }
-    for(int x=i-1; x>0; x--){
-        if(board_value[x][j]==0){
-            output(x, j, outputString[7+x]);
-        }
-        else output(x,j, outputString[7+x]); break;
-    }
-    for(int a=0; a<15; a++)
+    for (int x = j + 1; x < 9; x++)
     {
-        if(outputString[a][0]!='\0')
+        if (board_value[i][x] == 0)
         {
-            for(int b=0; b<2; b++){
-                printf("%c",outputString[a][b]);
+            output(i, x, outputString[x]);
+        }
+        else{
+            output(i, x, outputString[x]);
+        break;
+        }
+    }
+    for (int x = j - 1; x > 0; x--)
+    {
+        if (board_value[i][x] == 0)
+        {
+            output(i, x, outputString[x]);
+        }
+        else{
+            output(i, x, outputString[x]);
+        break;
+        }
+    }
+    for (int x = i + 1; x < 9; x++)
+    {
+        if (board_value[x][j] == 0)
+        {
+            output(x, j, outputString[7 + x]);
+        }
+        else{
+            output(x, j, outputString[7 + x]);
+        break;
+        }
+    }
+    for (int x = i - 1; x > 0; x--)
+    {
+        if (board_value[x][j] == 0)
+        {
+            output(x, j, outputString[7 + x]);
+        }
+        else{
+            output(x, j, outputString[7 + x]);
+        break;
+        }
+    }
+    for (int a = 0; a < 15; a++)
+    {
+        if (outputString[a][0] != '\0')
+        {
+            for (int b = 0; b < 2; b++)
+            {
+                printf("%c", outputString[a][b]);
             }
             printf(" ");
         }
@@ -460,5 +483,22 @@ void rook_processoor(int board_value[][9],int i,int j){
 }
 
 void horse_processor(int board_value[][9],int i,int j){
-    
+    char outputString[8][2];
+    for (int x = 0; x < 7; x++)
+    {
+        for (int y = 0; y < 1; y++)
+        {
+            outputString[x][y] = '\0';
+        }
+    }
+
+    for(int x=0; x<8; x++){
+        for(int y=0; y<1; y++){
+            if(x==0 && j<7){
+                if(i>1){
+
+                }
+            }
+        }
+    }
 }

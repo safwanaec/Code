@@ -1,5 +1,3 @@
-package Others;
-
 public class student1 {
     String name;
     String city;

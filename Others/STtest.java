@@ -1,5 +1,3 @@
-package Others;
-
 public class STtest {
     public static void main(String[] args) {
         student2 s1 = new student2();

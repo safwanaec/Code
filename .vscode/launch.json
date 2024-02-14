@@ -3,6 +3,106 @@
     "configurations": [
         {
             "type": "java",
+            "name": "c5",
+            "request": "launch",
+            "mainClass": "c5",
+            "projectName": "Code_72d74406"
+        },
+        {
+            "type": "java",
+            "name": "Calculator",
+            "request": "launch",
+            "mainClass": "Calculator",
+            "projectName": "Code_72d74406"
+        },
+        {
+            "type": "java",
+            "name": "a2",
+            "request": "launch",
+            "mainClass": "a2",
+            "projectName": "Code_72d74406"
+        },
+        {
+            "type": "java",
+            "name": "calc",
+            "request": "launch",
+            "mainClass": "calc",
+            "projectName": "Code_72d74406",
+            "vmArgs": "--module-path \"C:/Program Files/Java/javafx-sdk-21.0.2/lib\" --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "calcClass",
+            "request": "launch",
+            "mainClass": "calcClass",
+            "projectName": "Code_72d74406"
+        },
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "App",
+            "projectName": "Code_72d74406",
+            "vmArgs": "--module-path \"C:/Program Files/Java/javafx-sdk-21.0.2/lib\" --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Swing1",
+            "request": "launch",
+            "mainClass": "Swing1",
+            "projectName": "Code_72d74406"
+        },
+        {
+            "type": "java",
+            "name": "sumon",
+            "request": "launch",
+            "mainClass": "Alfaz_private.sumon",
+            "projectName": "Code_72d74406"
+        },
+        {
+            "type": "java",
+            "name": "test",
+            "request": "launch",
+            "mainClass": "test",
+            "projectName": "Code_72d74406"
+        },
+        {
+            "type": "java",
+            "name": "a1",
+            "request": "launch",
+            "mainClass": "a1",
+            "projectName": "Code_72d74406"
+        },
+        {
+            "type": "java",
+            "name": "a151223",
+            "request": "launch",
+            "mainClass": "a151223",
+            "projectName": "Code_72d74406"
+        },
+        {
+            "type": "java",
+            "name": "a141223",
+            "request": "launch",
+            "mainClass": "a141223",
+            "projectName": "Code_72d74406"
+        },
+        {
+            "type": "java",
+            "name": "gold",
+            "request": "launch",
+            "mainClass": "gold",
+            "projectName": "Code_72d74406"
+        },
+        {
+            "type": "java",
+            "name": "A61",
+            "request": "launch",
+            "mainClass": "A61",
+            "projectName": "Code_72d74406"
+        },
+        {
+            "type": "java",
             "name": "B1895",
             "request": "launch",
             "mainClass": "B1895",
