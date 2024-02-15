@@ -4,7 +4,7 @@ import java.io.IOException;
 public class a6 {
     public static void main(String[] args) {
         try{
-            FileInputStream fileInputStream = new FileInputStream("D:/example.txt");
+            FileInputStream fileInputStream = new FileInputStream("D:/input.txt");
             // Read bytes from the file
             int byteValue;
             while ((byteValue = fileInputStream.read()) != -1) {
