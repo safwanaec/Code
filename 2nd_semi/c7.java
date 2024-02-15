@@ -12,6 +12,7 @@ public class c7 {
         JButton c = new JButton("cancel");
         
         x.setSize(500, 500);
+        x.setLayout(new FlowLayout());
         x.add(a); 
         x.add(b);
         x.add(c);
