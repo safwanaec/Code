@@ -23,7 +23,6 @@ public class App extends Application {
 
         Button[] b = new Button[16];
         b[0].setText("+");
-        scene.
     }
 
     public static void main(String[] args) {
