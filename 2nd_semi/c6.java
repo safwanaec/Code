@@ -1,5 +1,4 @@
-import java.nio.file.Files;
-import java.nio.file.Path;
+import java.nio.file.*;
 
 public class c6 {
     public static void main(String[] args) {
