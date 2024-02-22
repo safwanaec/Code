@@ -1,20 +1,23 @@
 #include<stdio.h>
 #include<string.h>
-#include<math.h>
 #include<stdlib.h>
 
 void pblm1fancy(int array[], int arraysize);
+void pblm1(int array[], int arraysize);
 void pblm2(int array[], int arraylength);
 void pblm3(int start, int finish);
 void pblm4(int array[], int arraylength);
+void pblm5(int array[], int arraylength);
 
 int main(){
-    int sample[] = {12, 32, 43, 1, 54, 53, 15, 64, 3, 13};
+    int sample[] = {1,2,3,4,5,6,7,8,9,10};
     int length = sizeof(sample)/sizeof(sample[0]);
-    pblm1fancy(sample,length);
-    pblm2(sample,length);
-    pblm3(-20, 30);
-    pblm4(sample,length);
+    //pblm1(sample,length);
+    //pblm2(sample,length);
+    //pblm3(12, 23);
+    //pblm4(sample,length);
+    pblm5(sample, length);
+    
     return 0;
 }
 
@@ -29,7 +32,7 @@ void pblm1fancy(int array[], int arraysize){
         up = 2;
         up = array[i]>999 ? up+3 :  (array[i]>99 ? up+2 :  (up = array[i]>9 ? up+1 :  up));
         spacing = down>up ? down : up;
-        printf("%d,\033[s\033[2B",array[i]);
+        printf("%d,\033[s\033[2B",array[i]); 
         if(i==0){
             printf("\r");
         }
@@ -37,6 +40,21 @@ void pblm1fancy(int array[], int arraysize){
     }
 
     printf("\033[3B");
+}
+
+void pblm1(int array[], int arraysize){
+    //int arraysize = sizeof(array) / sizeof(array[0]);
+    printf("\n");
+    int down,up,spacing;
+    for(int i = 0; i<arraysize; i++){
+
+        printf("%d ",array[i]); 
+    }
+    printf("\n");
+    for(int i = 0; i<arraysize; i++){
+
+        printf("%d ",array[arraysize-i-1]);
+    }
 }
 
 void pblm2(int array[], int arraylength){
@@ -80,7 +98,7 @@ void pblm4(int array[], int arraylength){
             newarray[x]=300;
             x++;
         }
-        else if(x==4){
+        else if(x==4+1){
             newarray[x]=200;
             x++;
         }
@@ -97,5 +115,36 @@ void pblm4(int array[], int arraylength){
     printf("\nOutput array after addition: ");
     for(int i = 0; i<arraylength+3; i++){
         printf("%d ",newarray[i]);
+    }
+}
+
+void pblm5(int array[], int arraylength)
+{
+    int newArrayLength = arraylength - 3;
+    if (arraylength < 7)
+    {
+        newArrayLength++;
+    }
+
+    int newArray[newArrayLength], x = 0;
+
+    for (int i = 1; i < arraylength - 1; i++)
+    {
+        newArray[x] = array[i];
+        if (i == 5)
+        {
+            continue;
+        }
+        x++;
+    }
+    printf("\nGiven Array: ");
+    for (int i = 0; i < arraylength; i++)
+    {
+        printf("%d ", array[i]);
+    }
+    printf("\nOutput Array: ");
+    for (int i = 0; i < newArrayLength; i++)
+    {
+        printf("%d ", newArray[i]);
     }
 }
