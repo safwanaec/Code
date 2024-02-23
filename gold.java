@@ -20,5 +20,6 @@ public class gold {
         }
         double price = (((gold24/24)*goldCaret)/96.0)*weight;
         System.out.println("\nPrice: "+price);
+        inp.close();
     }
 }
