@@ -3,6 +3,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "aits3_1",
+            "request": "launch",
+            "mainClass": "aits3_1",
+            "projectName": "Code_72d74406"
+        },
+        {
+            "type": "java",
+            "name": "aits3",
+            "request": "launch",
+            "mainClass": "aits3",
+            "projectName": "Code_72d74406"
+        },
+        {
+            "type": "java",
             "name": "c5",
             "request": "launch",
             "mainClass": "c5",

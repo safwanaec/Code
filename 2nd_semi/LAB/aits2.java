@@ -1,5 +1,5 @@
 public class aits2{
-
+    // there are 9 primitive data types in java
     static int a;
     static short b;
     static byte c;
