@@ -5,12 +5,11 @@ int main()
     char name[100] = {'\0'};
     int value = 0;
     scanf("%s", name);
-    char n2[strlen(name)];
+    char n2[100] = {'\0'};
 
     for(int i=0; i<strlen(name); i++){
         for(int j=0; j<=i; j++){
             if(name[i]==n2[j]){
-                j--;
                 break;
             }
             else if(j==i && name[i]!=n2[j]){
