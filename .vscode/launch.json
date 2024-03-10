@@ -3,6 +3,41 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Ans3",
+            "request": "launch",
+            "mainClass": "Ans3",
+            "projectName": "Code_72d74406"
+        },
+        {
+            "type": "java",
+            "name": "Ans2",
+            "request": "launch",
+            "mainClass": "Ans2",
+            "projectName": "Code_72d74406"
+        },
+        {
+            "type": "java",
+            "name": "scrptengn",
+            "request": "launch",
+            "mainClass": "scrptengn",
+            "projectName": "Code_72d74406"
+        },
+        {
+            "type": "java",
+            "name": "davit_calc",
+            "request": "launch",
+            "mainClass": "davit_calc",
+            "projectName": "Code_72d74406"
+        },
+        {
+            "type": "java",
+            "name": "calculator",
+            "request": "launch",
+            "mainClass": "calculator",
+            "projectName": "Code_72d74406"
+        },
+        {
+            "type": "java",
             "name": "aits3_1",
             "request": "launch",
             "mainClass": "aits3_1",
